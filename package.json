@@ -1,0 +1,23 @@
+{
+  "name": "batch4",
+  "version": "1.0.0",
+  "description": "React Redux ES6 learning",
+  "main": "index.js",
+  "scripts": {
+    "sayHello": "ls",
+    "build:full-path": "node ./node_modules/.bin/webpack",
+    "build:short-path": "webpack"
+  },
+  "keywords": [
+    "ES6",
+    "React",
+    "Redux",
+    "Thunk",
+    "JavaScript"
+  ],
+  "author": "John",
+  "license": "MIT",
+  "devDependencies": {
+    "webpack": "^3.12.0"
+  }
+}
