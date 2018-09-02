@@ -36,12 +36,32 @@
 /******/ 	// define getter function for harmony exports
 /******/ 	__webpack_require__.d = function(exports, name, getter) {
 /******/ 		if(!__webpack_require__.o(exports, name)) {
-/******/ 			Object.defineProperty(exports, name, {
-/******/ 				configurable: false,
-/******/ 				enumerable: true,
-/******/ 				get: getter
-/******/ 			});
+/******/ 			Object.defineProperty(exports, name, { enumerable: true, get: getter });
 /******/ 		}
+/******/ 	};
+/******/
+/******/ 	// define __esModule on exports
+/******/ 	__webpack_require__.r = function(exports) {
+/******/ 		if(typeof Symbol !== 'undefined' && Symbol.toStringTag) {
+/******/ 			Object.defineProperty(exports, Symbol.toStringTag, { value: 'Module' });
+/******/ 		}
+/******/ 		Object.defineProperty(exports, '__esModule', { value: true });
+/******/ 	};
+/******/
+/******/ 	// create a fake namespace object
+/******/ 	// mode & 1: value is a module id, require it
+/******/ 	// mode & 2: merge all properties of value into the ns
+/******/ 	// mode & 4: return value when already ns object
+/******/ 	// mode & 8|1: behave like require
+/******/ 	__webpack_require__.t = function(value, mode) {
+/******/ 		if(mode & 1) value = __webpack_require__(value);
+/******/ 		if(mode & 8) return value;
+/******/ 		if((mode & 4) && typeof value === 'object' && value && value.__esModule) return value;
+/******/ 		var ns = Object.create(null);
+/******/ 		__webpack_require__.r(ns);
+/******/ 		Object.defineProperty(ns, 'default', { enumerable: true, value: value });
+/******/ 		if(mode & 2 && typeof value != 'string') for(var key in value) __webpack_require__.d(ns, key, function(key) { return value[key]; }.bind(null, key));
+/******/ 		return ns;
 /******/ 	};
 /******/
 /******/ 	// getDefaultExport function for compatibility with non-harmony modules
@@ -59,59 +79,49 @@
 /******/ 	// __webpack_public_path__
 /******/ 	__webpack_require__.p = "";
 /******/
+/******/
 /******/ 	// Load entry module and return exports
-/******/ 	return __webpack_require__(__webpack_require__.s = 0);
+/******/ 	return __webpack_require__(__webpack_require__.s = "./src/es6/index.js");
 /******/ })
 /************************************************************************/
-/******/ ([
-/* 0 */
+/******/ ({
+
+/***/ "./src/es6/file1.js":
+/*!**************************!*\
+  !*** ./src/es6/file1.js ***!
+  \**************************/
+/*! no static exports found */
 /***/ (function(module, exports, __webpack_require__) {
 
-const file1 = __webpack_require__(1);
-console.log('file1: ', file1);
+"use strict";
 
+
+console.log('File 1 loaded');
 
 /***/ }),
-/* 1 */
+
+/***/ "./src/es6/index.js":
+/*!**************************!*\
+  !*** ./src/es6/index.js ***!
+  \**************************/
+/*! no static exports found */
 /***/ (function(module, exports, __webpack_require__) {
 
-console.log('File 1 Loaded');
+"use strict";
 
-var userName = 'John';
 
-document.getElementById('user-name').innerHTML = userName;
+__webpack_require__(/*! ./file1.js */ "./src/es6/file1.js");
 
-__webpack_require__(2);
+console.log('Welcome to ES6 Session');
 
-module.exports = {
-  userName
+var userName = 'Rocky';
+console.log('userName: ', userName);
+
+var foo = function foo() {
+  console.log('Hi Fat Arrow');
 };
-
-
-/***/ }),
-/* 2 */
-/***/ (function(module, exports, __webpack_require__) {
-
-const userName = 'Some New Name';
-
-const result = 2 + 6;
-
-console.log('result: ', result);
-
-console.log('File 2 Loaded : ', userName);
-
-const file3Data = __webpack_require__(3);
-console.log('file3Data: ', file3Data);
-
-
-/***/ }),
-/* 3 */
-/***/ (function(module, exports) {
-
-module.exports = {
-  cityName: 'Bangalore'
-};
-
 
 /***/ })
-/******/ ]);
+
+/******/ });
+//# sourceMappingURL=webpack-bundle.js.map
