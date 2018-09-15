@@ -2,7 +2,7 @@ const path = require('path');
 
 module.exports = {
   mode: 'development', // Webpack v4
-  entry: './src/es6/index.js',
+  entry: './src/react-app/index.js',
   devtool: 'source-map',
   output: {
     path: path.resolve(__dirname, 'dist'),

@@ -1,3 +1,5 @@
+import { format } from "path";
+
 Source File
   -> Webpack
   -> Write to Dist folder
@@ -28,7 +30,7 @@ ES6 -> Code runs in Strict Mode -> This is undefined
 bind
 
 
-Destructuring Assignment in ES6
+// Destructuring Assignment in ES6
 Promises in ES6
 Classes in ES6
 Modules in ES6
@@ -37,3 +39,9 @@ Loops
 Map
 Filter
 forEach
+reduce
+
+
+JSX -> XML [javascript XML format]
+
+<img src="" >
