@@ -44,4 +44,4 @@ reduce
 
 JSX -> XML [javascript XML format]
 
-<img src="" >
+http://busypeoples.github.io/post/react-component-lifecycle/
